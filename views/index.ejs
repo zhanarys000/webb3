@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Shop</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="/">Online Shop</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/shop">Products</a>
+          </li>
+          <% if (user) { %>
+            <li class="nav-item">
+                <span class="nav-link"><%= user.username %></span>
+            </li>
+            <li class="nav-item">
+                <a href="/logout" class="nav-link bg-dark border-0" id="logoutbutton">Logout</a>
+            </li>
+            <% } else { %>
+                <li class="nav-item">
+                    <a class="nav-link" href="/login">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/register">Signup</a>
+                </li>
+                <% } %>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-7">
+                <div class="hero-content text-center text-lg-left">
+                    <h1 class="display-4 font-weight-bold text-primary">Welcome to Our Unique Online Shop</h1>
+                    <p class="lead text-secondary">Discover handcrafted products curated just for you.</p>
+                    <a href="#" class="btn btn-primary btn-lg">Explore Now</a>
+                </div>
+            </div>
+            <div class="col-lg-5 mt-4 mt-lg-0">
+                <div class="hero-image">
+                    <img src="/img/hero-image.jpg" class="img-fluid rounded-circle shadow-lg" alt="Hero Image">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+  <!-- Featured Products Section -->
+  <section class="featured-products">
+    <div class="container">
+      <h2 class="text-center mb-4">Featured Products</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="product1.jpg" class="card-img-top" alt="Product 1">
+            <div class="card-body">
+              <h5 class="card-title">Product 1</h5>
+              <p class="card-text">$10.99</p>
+              <a href="#" class="btn btn-primary">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+        <!-- Add more featured products here -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-light py-4">
+    <div class="container text-center">
+        <p>&copy; 2023 Online Shop, Zhanarys Assan se-2206</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS (optional if you're not using Bootstrap JavaScript components) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
